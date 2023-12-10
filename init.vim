@@ -16,6 +16,7 @@ lua require('indentblank')
 lua require('transparent_config')
 lua require('autopairs_config')
 lua require('webtools')
+lua require('etc')
 
 set background=dark
 set number

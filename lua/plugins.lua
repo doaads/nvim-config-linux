@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag' -- autoclose HTML tags
   use 'ray-x/web-tools.nvim'
   use 'mfussenegger/nvim-jdtls' -- jdtls
+  use 'yamatsum/nvim-cursorline' -- cursor line
 
   use({
     "kylechui/nvim-surround",
@@ -55,6 +56,7 @@ return require('packer').startup(function(use)
   },
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
 
   use({
    "nvim-telescope/telescope.nvim",
