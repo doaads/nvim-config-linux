@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
   use 'ray-x/web-tools.nvim'
   use 'mfussenegger/nvim-jdtls' -- jdtls
   use 'yamatsum/nvim-cursorline' -- cursor line
+  use 'lambdalisue/suda.vim' -- sudo
 
   use({
     "kylechui/nvim-surround",

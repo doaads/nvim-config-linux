@@ -1,9 +1,9 @@
 nnoremap <SPACE> <Nop>
 let mapleader = ' '
 
-set shellcmdflag=-command
-set shellquote=\"
-set shellxquote=
+"set shellcmdflag=-command
+"set shellquote=\"
+"set shellxquote=
 
 lua require('plugins')
 lua require('treesitter')
