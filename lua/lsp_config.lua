@@ -38,37 +38,6 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['pyright'].setup(coq.lsp_ensure_capabilities( {
-		on_attach = on_attach,
-		--flags = lsp_flags,
-}))
-
---require'lspconfig'.lua_ls.setup(coq.lsp_ensure_capabilities( {
---	on_attach = on_attach,
---}))
-
-require'lspconfig'.clangd.setup(coq.lsp_ensure_capabilities( {
-	on_attach = on_attach,
-}))
-
-require'lspconfig'.asm_lsp.setup(coq.lsp_ensure_capabilities( {
-	on_attach = on_attach,
-}))
-
-require'lspconfig'.rust_analyzer.setup(coq.lsp_ensure_capabilities( {
-	on_attach = on_attach,
-}))
-
-require'lspconfig'.tsserver.setup{}
-
-require'lspconfig'.html.setup(coq.lsp_ensure_capabilities( {
-	on_attach = on_attach,
-}))
-
-require'lspconfig'.jdtls.setup(coq.lsp_ensure_capabilities( {
-	on_attach = on_attach,
-}))
-
 
 local lspconfig = require'lspconfig'
 local configs = require "lspconfig.configs"
@@ -87,7 +56,13 @@ configs.dm_langserver = {
 
 local cmp = require'cmp'
 
+vim.api.nvim_create_user_command("CmpEnable", "lua require'cmp'.setup.buffer {enabled = true}", {})
+vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {completion = {autocomplete = false}}", {})
+--vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {enabled = false}", {})
+
   cmp.setup({
+	completion = {
+	},
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
@@ -153,6 +128,12 @@ local cmp = require'cmp'
     capabilities = capabilities
   }
 
-lspconfig.dm_langserver.setup{}
-vim.cmd [[ autocmd BufNewFile,BufRead *.dm,*.dme set filetype=dm ]]
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  require('lspconfig')['rust_analyzer'].setup {
+    capabilities = capabilities
+  }
 
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  require('lspconfig')['clangd'].setup {
+    capabilities = capabilities
+  }

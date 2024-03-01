@@ -40,6 +40,8 @@ nnoremap <Leader>k <C-W>k
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>h <C-W>h
 nnoremap . .
+nnoremap <Leader>da :CmpDisable<CR>
+nnoremap <Leader>ea :CmpEnable<CR>
 tnoremap <C-space> <C-\><C-n>
 tnoremap <Esc> cls<CR>exit<CR>
 
