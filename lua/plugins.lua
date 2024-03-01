@@ -11,8 +11,6 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter' -- treesitter
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'ms-jpq/coq_nvim' -- autocomplete
-  use 'ms-jpq/coq.artifacts' -- COQ snippets
   use 'romgrk/barbar.nvim' -- tablines
   use 'lukas-reineke/indent-blankline.nvim'
   use 'nvim-lualine/lualine.nvim'
@@ -31,6 +29,20 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-jdtls' -- jdtls
   use 'yamatsum/nvim-cursorline' -- cursor line
   use 'lambdalisue/suda.vim' -- sudo
+
+  -- TODO: Remove these and all mentions in plugins
+  use 'ms-jpq/coq_nvim' -- autocomplete
+  use 'ms-jpq/coq.artifacts' -- COQ snippets
+
+  use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+            'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+            'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+            'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        }
+    }
 
   use({
     "kylechui/nvim-surround",

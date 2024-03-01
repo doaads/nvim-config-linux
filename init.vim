@@ -17,6 +17,7 @@ lua require('transparent_config')
 lua require('autopairs_config')
 lua require('webtools')
 lua require('etc')
+lua require('cmp')
 
 set background=dark
 set number
