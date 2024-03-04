@@ -33,7 +33,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
-local coq = require "coq"
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
@@ -61,6 +60,7 @@ vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {c
 --vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {enabled = false}", {})
 
   cmp.setup({
+	view = 'native',
 	completion = {
 	},
     snippet = {
@@ -113,14 +113,14 @@ vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {c
   })
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
- -- cmp.setup.cmdline(':', {
- --   mapping = cmp.mapping.preset.cmdline(),
- --   sources = cmp.config.sources({
- --     { name = 'path' }
- --   }, {
- --     { name = 'cmdline' }
- --   })
- -- })
+  -- cmp.setup.cmdline(':', {
+  --   mapping = cmp.mapping.preset.cmdline(),
+  --   sources = cmp.config.sources({
+  --    { name = 'path' }
+  --  }, {
+  --    { name = 'cmdline' }
+  --  })
+  -- })
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
