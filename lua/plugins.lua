@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
   use 'yamatsum/nvim-cursorline' -- cursor line
   use 'lambdalisue/suda.vim' -- sudo
   use 'SirVer/ultisnips' -- ultisnips
+  use 'imbue-ai/jupyter_ascending' -- ipynb
 
   -- TODO: Remove these and all mentions in plugins
   -- use 'ms-jpq/coq_nvim' -- autocomplete

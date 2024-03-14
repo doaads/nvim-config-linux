@@ -60,8 +60,9 @@ vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {c
 --vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {enabled = false}", {})
 
   cmp.setup({
-	view = 'native',
+	--view = 'native',
 	completion = {
+		autocomplete = false,
 	},
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -82,7 +83,9 @@ vim.api.nvim_create_user_command("CmpDisable", "lua require'cmp'.setup.buffer {c
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-	  ['<tab>'] = cmp.mapping(cmp.mapping.confirm({ select = true }), { 'i', 's', }),
+	  ['<Tab>'] = {
+		c = cmp.config.disable
+	  }
 	}),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },

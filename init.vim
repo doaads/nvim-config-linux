@@ -30,7 +30,7 @@ set softtabstop=4
 set shiftwidth=4
 set ignorecase
 
-colorscheme kanagawa-dragon
+colorscheme catppuccin
 
 nnoremap <Leader>t :NvimTreeToggle<CR>
 nnoremap <Leader>o :TransparentToggle<CR>
