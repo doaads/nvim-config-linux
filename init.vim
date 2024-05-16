@@ -6,8 +6,8 @@ let mapleader = ' '
 "set shellxquote=
 
 lua require('plugins')
-lua require('treesitter')
 lua require('lsp_config')
+lua require('treesitter')
 lua require("tree")
 lua require("telescope_config")
 lua require("barbar_config")	
@@ -30,7 +30,9 @@ set softtabstop=4
 set shiftwidth=4
 set ignorecase
 
-colorscheme catppuccin
+colorscheme onedark
+highlight Normal ctermbg=NONE
+highlight NonText ctermbg=NONE
 
 nnoremap <Leader>t :NvimTreeToggle<CR>
 nnoremap <Leader>o :TransparentToggle<CR>
@@ -39,8 +41,6 @@ nnoremap <Leader>k <C-W>k
 nnoremap <Leader>l <C-W>l
 nnoremap <Leader>h <C-W>h
 nnoremap . .
-nnoremap <Leader>da :CmpDisable<CR>
-nnoremap <Leader>ea :CmpEnable<CR>
 tnoremap <C-space> <C-\><C-n>
 tnoremap <Esc> cls<CR>exit<CR>
 

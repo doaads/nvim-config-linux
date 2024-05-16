@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/doaads/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/doaads/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/doaads/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/doaads/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/doaads/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/follow-md-links.nvim",
     url = "https://github.com/jghauser/follow-md-links.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -124,10 +129,20 @@ _G.packer_plugins = {
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  jupyter_ascending = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/jupyter_ascending",
+    url = "https://github.com/imbue-ai/jupyter_ascending"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
+  },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -158,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cursorline"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
+    url = "https://github.com/yamatsum/nvim-cursorline"
   },
   ["nvim-jdtls"] = {
     loaded = true,
@@ -215,6 +235,16 @@ _G.packer_plugins = {
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -230,6 +260,11 @@ _G.packer_plugins = {
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
   },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -244,6 +279,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/doaads/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
+  },
+  ultisnips = {
+    loaded = true,
+    path = "/home/doaads/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
   },
   ["vim-cpp-modern"] = {
     loaded = true,

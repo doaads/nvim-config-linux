@@ -14,7 +14,7 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
   view = {
-	width = 40,
+	width = 30,
 	side = "right",
   }
 })

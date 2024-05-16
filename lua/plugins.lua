@@ -31,21 +31,13 @@ return require('packer').startup(function(use)
   use 'lambdalisue/suda.vim' -- sudo
   use 'SirVer/ultisnips' -- ultisnips
   use 'imbue-ai/jupyter_ascending' -- ipynb
+  use 'mhartington/formatter.nvim'
+  use "lukas-reineke/lsp-format.nvim" -- lsp format
+  use "navarasu/onedark.nvim" -- onedark colorscheme
+  use "nyoom-engineering/oxocarbon.nvim" -- oxocarbon colorscheme
 
-  -- TODO: Remove these and all mentions in plugins
-  -- use 'ms-jpq/coq_nvim' -- autocomplete
-  -- use 'ms-jpq/coq.artifacts' -- COQ snippets
-
-  -- TODO: configure this
-   use {
-         "hrsh7th/nvim-cmp",
-         requires = {
-             "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
-             'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
-             'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
-             'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
-         }
-     }
+  use 'ms-jpq/coq_nvim' -- autocomplete
+  use 'ms-jpq/coq.artifacts' -- COQ snippets
 
   use({
     "kylechui/nvim-surround",
