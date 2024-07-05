@@ -5,7 +5,10 @@ let mapleader = ' '
 "set shellquote=\"
 "set shellxquote=
 
+" main plugin repository
 lua require('plugins')
+
+" external lua plugin config
 lua require('lsp_config')
 lua require('treesitter')
 lua require("tree")
@@ -44,6 +47,7 @@ nnoremap . .
 tnoremap <C-space> <C-\><C-n>
 tnoremap <Esc> cls<CR>exit<CR>
 
+"assembly file settings
 autocmd FileType asm setlocal shiftwidth=8 tabstop=8
 
 source ~/.config/nvim/vim/markdown_preview.vim
