@@ -18,4 +18,4 @@ source ~/.config/nvim/vim/keymaps.vim
 source ~/.config/nvim/vim/markdown_preview.vim
 
 " load colorscheme
-colorscheme onedark
+colorscheme everforest
