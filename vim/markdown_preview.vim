@@ -74,3 +74,39 @@ let g:mkdp_preview_options = {
     \ 'toc': {}
     \ }
 
+" use a custom Markdown style. Must be an absolute path
+" like '/Users/username/markdown.css' or expand('~/markdown.css')
+let g:mkdp_markdown_css = ''
+
+" use a custom highlight style. Must be an absolute path
+" like '/Users/username/highlight.css' or expand('~/highlight.css')
+let g:mkdp_highlight_css = ''
+
+" use a custom port to start server or empty for random
+let g:mkdp_port = ''
+
+" preview page title
+" ${name} will be replace with the file name
+let g:mkdp_page_title = '「${name}」'
+
+" use a custom location for images
+"let g:mkdp_images_path = /home/user/.markdown_images
+
+" recognized filetypes
+" these filetypes will have MarkdownPreview... commands
+let g:mkdp_filetypes = ['markdown']
+
+" set default theme (dark or light)
+" By default the theme is defined according to the preferences of the system
+let g:mkdp_theme = 'dark'
+
+" combine preview window
+" default: 0
+" if enable it will reuse previous opened preview window when you preview markdown file.
+" ensure to set let g:mkdp_auto_close = 0 if you have enable this option
+let g:mkdp_combine_preview = 0
+
+" auto refetch combine preview contents when change markdown buffer
+" only when g:mkdp_combine_preview is 1
+let g:mkdp_combine_preview_auto_refresh = 1
+
