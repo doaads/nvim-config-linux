@@ -1,16 +1,17 @@
+-- import all config files under /configs
 
 local function load_imports()
 	local files = {
-		'autopairs_config',
-		'barbar_config',
-		'cursorline_config',
-		'lualine_config',
-		'indentblank_config',
-		'telescope_config',
-		'tree_config',
-		'treesitter_config',
-		'lsp_config',
-		'transparent_config',
+		'configs/autopairs_config',
+		'configs/barbar_config',
+		'configs/cursorline_config',
+		'configs/lualine_config',
+		'configs/indentblank_config',
+		'configs/telescope_config',
+		'configs/tree_config',
+		'configs/treesitter_config',
+		'configs/lsp_config',
+		'configs/transparent_config',
 	}
 
 	for _, file in ipairs(files) do
